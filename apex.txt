@@ -1,0 +1,21 @@
+public class LinearSearchExample {
+    public static Integer linearSearch(List<Integer> arr, Integer target) {
+        for (Integer i = 0; i < arr.size(); i++) {
+            if (arr[i] == target) {
+                return i; // Return the index if found
+            }
+        }
+        return -1; // Not found
+    }
+}
+
+// Run this in the Developer Console's Execute Anonymous Window
+List<Integer> numbers = new List<Integer>{5, 8, 12, 3, 9};
+Integer target = 12;
+Integer index = LinearSearchExample.linearSearch(numbers, target);
+
+if (index != -1) {
+    System.debug('Target found at index: ' + index);
+} else {
+    System.debug('Target not found.');
+}
